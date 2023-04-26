@@ -9,12 +9,7 @@ interface HeaderProps {
 }
 
 export function Header({ tasksCounter }: HeaderProps) {
-  const tasksCounterText = "tarefa";
-  if ((tasksCounter = 1)) {
-    ("tarefa");
-  } else {
-    ("tarefas");
-  }
+  const tasksCounterText = tasksCounter === 1 ? "tarefa" : "tarefas";
   return (
     <View style={styles.container}>
       <Image source={logoImg} />
