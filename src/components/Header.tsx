@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-import logoImg from '../assets/images/logo(1).png';
+import logoImg from "./../assets/images/logo.png";
 
 interface HeaderProps {
   tasksCounter: number;
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     paddingTop: getStatusBarHeight(true) + 16,
     paddingHorizontal: 24,
     paddingBottom: 60,
-    backgroundColor: '#8257E5',
+    backgroundColor: '#3182CE',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row'
