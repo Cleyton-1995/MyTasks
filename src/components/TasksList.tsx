@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 
 import { ItemWrapper } from './ItemWrapper';
 import { EditTaskArgs } from '../pages/Home';
+import { TaskItem } from './TaskItem';
 
 
 export interface Task {
@@ -18,7 +19,7 @@ interface TasksListProps {
   editTaks: ({taskId, taskNewTitle}: EditTaskArgs) => void;
 }
 
-export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps) {
+export function TasksList({ tasks, toggleTaskDone, removeTask, editTaks }: TasksListProps) {
   return (
     <FlatList
       data={tasks}
@@ -28,7 +29,12 @@ export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps)
       renderItem={({ item, index }) => {
         return (
           <ItemWrapper index={index}>
-            
+            <TaskItem
+              tasks={item}
+              editTaks={editTaks}
+              toggleTaskDone={toggleTaskDone}
+              removeTask={removeTask}
+            />           
           </ItemWrapper>
         )
       }}
