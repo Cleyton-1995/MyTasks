@@ -32,6 +32,7 @@ export function TaskItem({
 
   function handleSubmitEditing() {
     editTaks({ taskId: tasks.id, taskNewTitle: taskNewTitleValue });
+    setIsEditing(false);
   }
 
   useEffect(() => {
@@ -67,7 +68,7 @@ export function TaskItem({
         </TouchableOpacity>
       </View>
 
-      <View style={styles.iconsContainer} >
+      <View style={styles.iconsContainer}>
         {isEditing ? (
           <TouchableOpacity onPress={handleCancelEditing}>
             <Icon name="x" size={24} color="#b2b2b2" />
