@@ -62,7 +62,7 @@ export function TaskItem({
             onChangeText={setTaskNewTitleValue}
             editable={isEditing}
             onSubmitEditing={handleSubmitEditing}
-            style={tasks.done ? styles.taskTextDone : styles.taskText}
+            style={[tasks.done ? styles.taskTextDone : styles.taskText, {width: 200}]}
             ref={textInputRef}
           />
         </TouchableOpacity>
