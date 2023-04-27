@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 import logoImg from "./../assets/images/logo.png";
+import { ThemesFontes } from "../themes/default";
 
 interface HeaderProps {
   tasksCounter: number;
@@ -41,11 +42,11 @@ const styles = StyleSheet.create({
   tasksCounter: {
     fontSize: 15,
     color: "#FFF",
-    fontFamily: "Inter-Regular",
+    fontFamily: ThemesFontes[500],
   },
   tasksCounterBold: {
     fontSize: 15,
     color: "#FFF",
-    fontFamily: "Inter-Bold",
+    fontFamily: ThemesFontes[600],
   },
 });

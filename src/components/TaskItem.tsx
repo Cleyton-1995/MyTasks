@@ -96,6 +96,7 @@ import { StyleSheet } from "react-native";
 import { Task } from "./TasksList";
 import { EditTaskArgs } from "../pages/Home";
 import Icon from "react-native-vector-icons/Feather";
+import { ThemesFontes } from "../themes/default";
 
 export const styles = StyleSheet.create({
   container: {
@@ -128,7 +129,7 @@ export const styles = StyleSheet.create({
   },
   taskText: {
     color: "#666",
-    fontFamily: "Inter-Medium",
+    fontFamily: ThemesFontes[500],
   },
   taskMarkerDone: {
     height: 16,
@@ -142,7 +143,7 @@ export const styles = StyleSheet.create({
   taskTextDone: {
     color: "#1DB863",
     textDecorationLine: "line-through",
-    fontFamily: "Inter-Medium",
+    fontFamily: ThemesFontes[500],
   },
   iconsContainer: {
     flexDirection: "row",
